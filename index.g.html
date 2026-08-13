@@ -67,11 +67,11 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1561517235697373');
+fbq('init', '1059405196463271');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1561517235697373&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=1059405196463271&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 </head>
@@ -92,5 +92,15 @@ E|--0--0--3--5--3----|</pre></div><div class="skills"><span>Acordes e trocas</sp
 <section class="section" id="comprar"><div class="wrap offer"><div class="offer-grid"><div><p class="eyebrow">Acesso ao curso</p><h2>Primeiro Som — Guitarra</h2><p>Uma formação focada em guitarra para quem quer sair do absoluto zero e começar a tocar acordes, riffs e bases com mais segurança.</p></div><div class="offer-side"><div class="price">R$ 9,90 <small>pagamento único</small></div><a class="btn checkout" href="#">Comprar agora</a></div></div><div class="release"><b>7D</b><div><h3>Primeira semana para avaliar com calma</h3><p>Após a compra pela Cakto, uma parte inicial do conteúdo ficará disponível durante os primeiros 7 dias, com no mínimo cerca de 20 páginas. Você poderá estudar o material liberado e decidir se deseja continuar ou solicitar a devolução dentro do prazo aplicável.</p></div></div></div></section>
 </main>
 <footer><div class="wrap foot"><div><strong>Primeiro Som — Guitarra</strong><br>Curso para iniciantes.</div><div>© <span id="year"></span> Todos os direitos reservados.<br>Resultados dependem da prática e dedicação.</div></div></footer>
-<script>const CHECKOUT_URL="#";document.querySelectorAll('.checkout').forEach(a=>a.href=CHECKOUT_URL);document.getElementById('year').textContent=new Date().getFullYear();</script>
+<script>
+  const CHECKOUT_URL = "https://pay.cakto.com.br/3emrzhm_994579";
+  fbq('track', 'ViewContent', { content_name: 'Primeiro Som — Guitarra', content_type: 'product', value: 9.90, currency: 'BRL' });
+  document.querySelectorAll('.checkout').forEach(a => {
+    a.href = CHECKOUT_URL;
+    a.addEventListener('click', () => {
+      fbq('track', 'InitiateCheckout', { content_name: 'Primeiro Som — Guitarra', value: 9.90, currency: 'BRL' });
+    });
+  });
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body></html>
